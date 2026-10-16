@@ -12,11 +12,13 @@ Separate from Santhosh's own material in `../portfolio/`.
 
 ```
 arun-philip/
-├── README.md            # this file
-├── history.md           # job / application history — the running record
+├── README.md                # this file
+├── flake.nix                # nix devShell — typst, typstyle, poppler-utils, fonts
+├── questions-for-arun.md    # questionnaire to send him — unblocks the draft
+├── history.md               # job / application history — the running record
 ├── sources/
-│   └── profile.md       # source of truth for Arun's facts (roles, skills, …)
-└── outputs/             # generated resume / CV / portfolio artefacts
+│   └── profile.md           # source of truth for Arun's facts (roles, skills, …)
+└── outputs/                 # generated resume / CV / portfolio artefacts
 ```
 
 ## Conventions
@@ -28,7 +30,23 @@ arun-philip/
   status in place and keep the dated trail rather than rewriting it.
 - **`outputs/` is generated.** Don't hand-edit anything in there.
 
+## Toolchain
+
+```sh
+nix develop     # typst, typstyle, pdftotext, gnumake, fonts on TYPST_FONT_PATHS
+```
+
 ## Status
 
-Scaffolding only. **Blocked on Arun's actual CV content** — see
-`sources/profile.md`, which is a questionnaire until it's filled in.
+`sources/profile.md` is populated from Arun's LinkedIn PDF export plus an
+interview, with confidence markers on every claim (`[LI]` export, `[SR]`
+second-hand, `[?]` unresolved).
+
+**Positioning: Data Analyst** — defensible. His LinkedIn is badly maintained
+and silent on five years of genuine analyst work (Tableau, pivot tables,
+reconciliation, forecasting support) across two US client accounts.
+
+**Blocked on four answers** before a draft is worth writing — whether clients
+may be named, what "Golden Bear" really is, whether a dollar figure is rent or
+arrears, and two timeline gaps. These need Arun himself:
+**send him `questions-for-arun.md`.**
