@@ -1,0 +1,22 @@
+# Generated artefacts — rebuild from sources/ instead of committing
+outputs/
+
+# Typst / LaTeX build noise
+build/
+*.aux
+*.log
+*.out
+*.toc
+*.synctex.gz
+
+# OS noise
+.DS_Store
+._*
+Thumbs.db
+
+# Editor noise
+*.swp
+*.swo
+*~
+.vscode/
+.idea/
